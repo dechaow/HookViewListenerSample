@@ -21,13 +21,11 @@ class MainActivity : AppCompatActivity(){
 
         main_button.setOnClickListener {
             v: View? ->
-            //hook
-            HookUtils.hookOnClick(v)
-            // kotlin write
-            KHookUtils.hookOnClick(v!!)
             //下面可以继续写自己的逻辑
-            // but it don't i want
         }
+        
+        //hook
+        HookUtils.hookOnClick(v)
 
     }
 }
