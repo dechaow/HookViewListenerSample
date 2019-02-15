@@ -42,7 +42,7 @@ public class HookUtils {
             //but i don't want this effect
             //动态代理
             View.OnClickListener clickListener1 = (View.OnClickListener) Proxy.newProxyInstance(clickListener.getClass().getClassLoader(),clickListener.getClass().getInterfaces(),new ProxyHandler(clickListener));
-            //调用OnClick方法
+            //使用clickListener1 hook 原来的方法
             mClick.set(method,clickListener1);
 
         } catch (ClassNotFoundException e) {
