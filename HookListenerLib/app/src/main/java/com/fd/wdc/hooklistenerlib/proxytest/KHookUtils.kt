@@ -33,7 +33,7 @@ class KHookUtils{
 
             var reClick :View.OnClickListener  = Proxy.newProxyInstance(clickListener.javaClass.classLoader,clickListener.javaClass.interfaces,ProxyHandler(clickListener)) as View.OnClickListener
 
-            reClick.onClick(view)
+            clickField.set(listenerMethod,reClick)
         }
     }
 }
