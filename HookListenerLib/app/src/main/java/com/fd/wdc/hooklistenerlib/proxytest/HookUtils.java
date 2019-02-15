@@ -43,7 +43,7 @@ public class HookUtils {
             //动态代理
             View.OnClickListener clickListener1 = (View.OnClickListener) Proxy.newProxyInstance(clickListener.getClass().getClassLoader(),clickListener.getClass().getInterfaces(),new ProxyHandler(clickListener));
             //调用OnClick方法
-            clickListener1.onClick(view);
+            mClick.set(method,clickListener1);
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
